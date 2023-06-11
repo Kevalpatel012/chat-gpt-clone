@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 * {
@@ -105,7 +106,7 @@ input:focus {
 
 #submit {
   position: absolute;
-  bottom: 10px; /* Adjust the value as per your preference */
+  bottom: 8px; /* Adjust the value as per your preference */
   right: 0;
   cursor: pointer;
   background-color: #4CAF50;
