@@ -1,6 +1,7 @@
 const PORT = 8000;
 const express = require('express');
 const cors = require('cors');
+const fetch = require('node-fetch');
 require('dotenv').config();
 
 const app = express();
@@ -31,6 +32,7 @@ app.post('/completions', async (req, res) => {
     res.send(data);
   } catch (error) {
     console.error(error);
+    res.status(500).send('An error occurred while fetching data.');
   }
 });
 
