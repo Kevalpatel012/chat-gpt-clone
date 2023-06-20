@@ -4,12 +4,12 @@ const fetch = require('node-fetch');
 require('dotenv').config();
 
 const app = express();
-const port = 8000;
 
 // Middleware
 app.use(express.json());
 app.use(cors());
 
+const PORT = process.env.PORT || 8000;
 const API_KEY = process.env.API_KEY;
 
 // API Endpoint for chat completions
@@ -26,18 +26,15 @@ app.post('/completions', async (req, res) => {
       max_tokens: 100,
     }),
   };
-
   try {
     const response = await fetch('https://api.openai.com/v1/chat/completions', options);
     const data = await response.json();
     res.send(data);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: 'An error occurred' });
+    res.status(500).json({ error: 'Something went wrong' });
   }
 });
 
 // Start the server
-app.listen(port, () => {
-  console.log(`Your server is running on PORT ${port}`);
-});
+app.listen(PORT, () => console.log('Your server is running on PORT ' + PORT));
