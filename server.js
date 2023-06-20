@@ -1,12 +1,9 @@
 const PORT = 8000;
 const express = require('express');
 const cors = require('cors');
-const fetch = require('node-fetch');
-const dotenv = require('dotenv');
-const app = express();
+require('dotenv').config();
 
-// Load environment variables from .env file
-dotenv.config();
+const app = express();
 
 // Middleware
 app.use(express.json());
@@ -29,12 +26,11 @@ app.post('/completions', async (req, res) => {
     }),
   };
   try {
-    const response = await fetch('https://api.openai.com/v1/chat/completions', options);
+    const response = await fetch('https://api.openai.com/v1/chat/completions/', options);
     const data = await response.json();
     res.send(data);
   } catch (error) {
     console.error(error);
-    res.status(500).send('An error occurred while fetching data.');
   }
 });
 
