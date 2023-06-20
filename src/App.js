@@ -33,7 +33,7 @@ const App = () => {
       },
     };
     try {
-      const response = await fetch('https://localhost:8000/completions', options);
+      const response = await fetch('http://127.0.0.1:8000/completions', options);
       const data = await response.json();
       setMessage(data.choices[0].message);
     } catch (error) {
