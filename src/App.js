@@ -33,7 +33,7 @@ const App = () => {
       },
     };
     try {
-      const response = await fetch('https://personal-gpt-65ab21364429.herokuapp.com/', options);
+      const response = await fetch('https://localhost:8000/completions', options);
       const data = await response.json();
       setMessage(data.choices[0].message);
     } catch (error) {
