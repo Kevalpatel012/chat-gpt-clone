@@ -2,9 +2,11 @@ const PORT = 8000;
 const express = require('express');
 const cors = require('cors');
 const fetch = require('node-fetch');
-require('dotenv').config();
-
+const dotenv = require('dotenv');
 const app = express();
+
+// Load environment variables from .env file
+dotenv.config();
 
 // Middleware
 app.use(express.json());
