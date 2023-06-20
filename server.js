@@ -2,6 +2,7 @@ const PORT = 8000;
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
+const fetch = require('node-fetch'); // Import fetch from node-fetch
 
 const app = express();
 
