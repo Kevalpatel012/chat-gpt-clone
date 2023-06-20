@@ -1,23 +1,27 @@
-
+/* Import Open Sans font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
+/* Global styles */
 
-
+/* Set default font family and color for all elements */
 * {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
 }
 
+/* Reset default margin and padding for the body */
 body {
   margin: 0;
   padding: 0;
 }
 
+/* App container */
 .app {
   background-color: #343541;
   display: flex;
 }
 
+/* Sidebar styles */
 .side-bar {
   background-color: #202123;
   height: 100vh;
@@ -27,6 +31,7 @@ body {
   justify-content: space-between;
 }
 
+/* Button styles */
 button {
   border: solid 0.5px rgba(255, 255, 255, 0.5);
   background-color: transparent;
@@ -43,12 +48,14 @@ button:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Navigation styles */
 nav {
   border-top: solid 0.5px rgba(255, 255, 255, 0.5);
   padding: 10px;
   margin: 10px;
 }
 
+/* Chat history styles */
 .history {
   padding: 10px;
   margin: 10px;
@@ -62,6 +69,7 @@ nav {
   font-size: 14px;
 }
 
+/* Main section styles */
 .main {
   height: 100vh;
   width: 100%;
@@ -72,18 +80,21 @@ nav {
   text-align: center;
 }
 
+/* Information text styles */
 .info {
   color: rgba(255, 255, 255, 0.5);
   font-size: 11px;
   padding: 10px;
 }
 
+/* Input container styles */
 .input-container {
   position: relative;
   width: 100%;
   max-width: 650px;
 }
 
+/* Input field styles */
 input {
   width: 100%;
   font-size: 20px;
@@ -98,6 +109,7 @@ input:focus {
   outline: none;
 }
 
+/* Bottom section styles */
 .bottom-section {
   width: 100%;
   display: flex;
@@ -106,6 +118,7 @@ input:focus {
   align-items: center;
 }
 
+/* Submit button styles */
 #submit {
   position: absolute;
   bottom: 8px; /* Adjust the value as per your preference */
@@ -126,6 +139,7 @@ input:focus {
   background-color: #45a049;
 }
 
+/* Feed section styles */
 .feed {
   overflow-y: auto;
   width: 100%;
@@ -145,6 +159,7 @@ input:focus {
   border-radius: 4px;
 }
 
+/* Individual chat message styles */
 .feed li {
   display: flex;
   background-color: #444654;
