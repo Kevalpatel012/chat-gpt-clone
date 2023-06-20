@@ -1,6 +1,6 @@
+const PORT = 8000;
 const express = require('express');
 const cors = require('cors');
-const fetch = require('node-fetch');
 require('dotenv').config();
 
 const app = express();
@@ -9,7 +9,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const PORT = process.env.PORT || 8000;
 const API_KEY = process.env.API_KEY;
 
 // API Endpoint for chat completions
@@ -32,7 +31,6 @@ app.post('/completions', async (req, res) => {
     res.send(data);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: 'Something went wrong' });
   }
 });
 
