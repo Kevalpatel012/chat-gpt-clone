@@ -33,7 +33,7 @@ const App = () => {
       },
     };
     try {
-      const response = await fetch('/completions', options);
+      const response = await fetch('/completions/', options);
       const data = await response.json();
       setMessage(data.choices[0].message);
     } catch (error) {
