@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import fetch from 'node-fetch'; // Import fetch from node-fetch
 
 const App = () => {
   // State variables
