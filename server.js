@@ -9,10 +9,16 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const corsOptions = {
+  origin: 'https://chat-gpt-clone-1tp7xeios-kevalpatel012.vercel.app',
+};
+
+app.use(cors(corsOptions));
+
 const API_KEY = process.env.API_KEY;
 
 // API Endpoint for chat completions
-app.post('/completions/', async (req, res) => {
+app.post('/completions', async (req, res) => {
   const options = {
     method: 'POST',
     headers: {
