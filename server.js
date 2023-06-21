@@ -16,6 +16,9 @@ app.post('/completions', async (req, res) => {
   const options = {
     method: 'POST',
     headers: {
+      'Access-Control-Allow-Origin': 'https://chat-gpt-clone-5knytf2o6-kevalpatel012.vercel.app',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
       Authorization: `Bearer ${API_KEY}`,
       'Content-Type': 'application/json',
     },
