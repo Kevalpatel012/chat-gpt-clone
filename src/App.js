@@ -33,7 +33,7 @@ const App = () => {
       },
     };
     try {
-      const response = await fetch('https://chat-gpt-clone-sigma-chat-gpt-clone-4ftlmgw30-kevalpatel012.vercel.app.vercel.app/completions', options);
+      const response = await fetch('https://chat-gpt-clone-9v0vqhh1h-kevalpatel012.vercel.app', options);
       const data = await response.json();
       setMessage(data.choices[0].message);
     } catch (error) {
