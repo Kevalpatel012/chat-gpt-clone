@@ -9,12 +9,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const corsOptions = {
-  origin: 'chat-gpt-clone-4ftlmgw30-kevalpatel012.vercel.app',
-};
-
-app.use(cors(corsOptions));
-
 const API_KEY = process.env.API_KEY;
 
 // API Endpoint for chat completions
