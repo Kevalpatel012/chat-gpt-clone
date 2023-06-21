@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 const corsOptions = {
-  origin: 'https://chat-gpt-clone-1tp7xeios-kevalpatel012.vercel.app',
+  origin: 'https://chat-gpt-clone-sigma-sooty.vercel.app/',
 };
 
 app.use(cors(corsOptions));
