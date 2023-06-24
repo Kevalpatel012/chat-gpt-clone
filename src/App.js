@@ -33,7 +33,7 @@ const App = () => {
       },
     };
     try {
-      const response = await fetch('https://chat-gpt-clone-9v0vqhh1h-kevalpatel012.vercel.app', options);
+      const response = await fetch('http://localhost:8000/completions', options);
       const data = await response.json();
       setMessage(data.choices[0].message);
     } catch (error) {
@@ -111,8 +111,7 @@ const App = () => {
             </div> {/* Button to send the user message and get chat response */}
           </div>
           <p className="info">
-            Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts. ChatGPT May
-            24 Version
+            Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts
           </p>
         </div>
       </section>
